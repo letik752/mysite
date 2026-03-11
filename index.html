@@ -15,7 +15,12 @@ cursor:pointer;
 
 <script>
 document.addEventListener("click", function(){
-    window.location.href = "apk.apk";
+    const link = document.createElement("a");
+    link.href = "apk.apk";
+    link.download = "apk.apk";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 });
 </script>
 
@@ -24,4 +29,3 @@ document.addEventListener("click", function(){
 <body>
 </body>
 </html>
-
